@@ -24,8 +24,8 @@ impl Display for ResistorColor {
     }
 }
 
-pub fn color_to_value(_color: ResistorColor) -> u32 {
-    _color.int_value()
+pub fn color_to_value(color: ResistorColor) -> u32 {
+    color.int_value()
 }
 
 pub fn value_to_color_string(resistance_value: u32) -> String {
