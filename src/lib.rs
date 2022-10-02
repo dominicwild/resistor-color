@@ -37,6 +37,6 @@ pub fn value_to_color_string(resistance_value: u32) -> String {
 
 pub fn colors() -> Vec<ResistorColor> {
     let mut collect: Vec<ResistorColor> = enum_iterator::all().collect();
-    collect.sort_by(|a, b| color_to_value(a.clone()).cmp(&color_to_value(b.clone())));
+    collect.sort_by(|a, b| a.int_value().cmp(&b.int_value()));
     return collect;
 }
