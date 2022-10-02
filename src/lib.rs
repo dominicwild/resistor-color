@@ -1,4 +1,4 @@
-use std::{fmt::Display};
+use std::fmt::Display;
 
 use enum_iterator::Sequence;
 
@@ -37,8 +37,7 @@ pub fn value_to_color_string(resistance_value: u32) -> String {
 }
 
 pub fn colors() -> Vec<ResistorColor> {
-    let mut collect = enum_iterator::all::<ResistorColor>()
-        .collect::<Vec<_>>();
+    let mut collect: Vec<ResistorColor> = enum_iterator::all().collect::<Vec<_>>();
     collect.sort_by(|a, b| color_to_value(a.clone()).cmp(&color_to_value(b.clone())));
-    return collect
+    return collect;
 }
